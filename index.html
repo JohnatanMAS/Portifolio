@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev | Portifolio </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link"> Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="img/perfil.jpeg" alt="Foto de Johnatan Morrison Alves Silva" class="foto-perfil">
+        <h1>Johnatan Morrison Alves Silva</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Sou um Desenvolvedor Web Full Stack em busca de conhecimento,experiencia e aperfeiçoamento no Código
+                limpo de facil entendimento com design moderno para desenvolver sites que não funciona de maneira
+                ideal, mas tambem que impressona visualmente, proporcionando uma ótima experiência ao usuário. Estou
+                sempre aberto a novas oportunidades e desafios na área de desenvolvimento web.
+                Experiência no desenvolvimento de aplicações web completas:
+            </p>
+            <img align="center" alt="Html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" width="150" height="50" />
+                <img align="center" alt="Css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"  width="150" height="50" />
+                <img align="center" alt="JS" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"  width="150" height="50" />
+                <img align="center" alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"  width="150" height="50" />
+                <img align="center" alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"  width="150" height="50" />
+
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            
+            <div class="projetos-card" >
+                <img src="img/projeto1.png" class="projetos-imagem" alt="Projeto 1">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Previsão do Tempo com IA</h3>
+                    <p class="paragrafo-projetos">Saiba a Previsão o tempo ao vivo em qualquer lugar do mundo basta digitar a cidade ou falar onde  deseja com nova tecnologia a IA te recomenda qual roupa utilizar.</p>
+                <div class="card-buttons">
+                <a href="https://previsao-do-tempo-ia.vercel.app/" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/JohnatanMAS/PrevisaoDoTempoIA" class="btn btn-secondary">GitHub</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto2.png" class="projetos-imagem" alt="Projeto 2">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Pagina de Viagens</h3>
+                    <p class="paragrafo-projetos">Descrição do Projeto 2</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto3.png" class="projetos-imagem" alt="Projeto 3">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Site Microsoft</h3>
+                    <p class="paragrafo-projetos">Descrição do Projeto 3</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Sua Mensagem" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarwhats(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5562982436674';
+
+        const texto = `Olá , meu nome é Johnatan pode me contatar pelo whatsapp!${nome}. ${mensagem}`;
+        const mesgformatada = encodeURIComponent(texto);
+
+        const url = `https://wa.me/${telefone}?text=${mesgformatada}`;
+
+        window.open(url, '_blank');
+        }
+
+    </script>
+</body>
+
+
+</html>
