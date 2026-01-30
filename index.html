@@ -30,7 +30,7 @@
 
     <main id="inicio" class="cabecalho">
 
-        <img src="img/perfil.jpeg" alt="Foto de Johnatan Morrison Alves Silva" class="foto-perfil">
+        <img src="img/PG.png" alt="Foto de Johnatan Morrison Alves Silva" class="foto-perfil">
         <h1>Johnatan Morrison Alves Silva</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
 
@@ -62,11 +62,11 @@
             <div class="projetos-card" >
                 <img src="img/projeto1.png" class="projetos-imagem" alt="Projeto 1">
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Previsão do Tempo com IA</h3>
-                    <p class="paragrafo-projetos">Saiba a Previsão o tempo ao vivo em qualquer lugar do mundo basta digitar a cidade ou falar onde  deseja com nova tecnologia a IA te recomenda qual roupa utilizar.</p>
+                    <h3 class="info-projetos">BurgerHub</h3>
+                    <p class="paragrafo-projetos">Leve seu negócio de hambúrgueres a outro nível com um site de vendas online, aproveite cada detalhe ergonomico, site mordeno para venda do seu hambúrguer favorito.</p>
                 <div class="card-buttons">
-                <a href="https://previsao-do-tempo-ia.vercel.app/" class="btn btn-primary">Ver Projeto</a>
-                <a href="https://github.com/JohnatanMAS/PrevisaoDoTempoIA" class="btn btn-secondary">GitHub</a>
+                <a href="https://hamburgueria-gyn.vercel.app/" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/JohnatanMAS/HamburgueriaGyn" class="btn btn-secondary">GitHub</a>
                 </div>
                 </div>
             </div>
@@ -74,8 +74,12 @@
             <div class="projetos-card">
                 <img src="img/projeto2.png" class="projetos-imagem" alt="Projeto 2">
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Pagina de Viagens</h3>
-                    <p class="paragrafo-projetos">Descrição do Projeto 2</p>
+                    <h3 class="info-projetos">Previsão do Tempo com IA</h3>
+                    <p class="paragrafo-projetos">Saiba a Previsão o tempo ao vivo em qualquer lugar do mundo, basta digitar a cidade ou falar onde  deseja com nova tecnologia a IA te recomenda qual roupa utilizar.</p>
+                    <div class="card-buttons">
+                <a href="https://previsao-do-tempo-ia.vercel.app/" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/JohnatanMAS/PrevisaoDoTempoIA" class="btn btn-secondary">GitHub</a>
+                </div>
                 </div>
             </div>
 
@@ -111,7 +115,7 @@
         const mensagem = document.getElementById('mensagem').value;
         const telefone = '5562982436674';
 
-        const texto = `Olá , meu nome é Johnatan pode me contatar pelo whatsapp!${nome}. ${mensagem}`;
+        const texto = `Olá,${nome}! , ${mensagem} . Muito obrigado pelo contato. Já recebi sua mensagem e retorno em breve para conversarmos com calma."`;
         const mesgformatada = encodeURIComponent(texto);
 
         const url = `https://wa.me/${telefone}?text=${mesgformatada}`;
